@@ -150,10 +150,10 @@
 
   <section class="modal modal-feedback">
     <h2 class="visually-hidden">Заблудились? Напишите нам!</h2>
-    <form>
+    <form name="feedback-form" method="post" action="#">
       <div class="half-width">
         <label for="name">Ваше имя:</label>
-        <input type="text" id="name" name="name" placeholder="Имя Фамилия" autofocus>
+        <input type="text" id="name" name="name" placeholder="Имя Фамилия">
       </div>
 
       <div class="half-width">
@@ -164,7 +164,7 @@
       <label for="letter">Текст письма:</label>
       <textarea id="letter" name="letter" rows="5" placeholder="В свободной форме"></textarea>
 
-      <input type="submit" value="Отправить">
+      <button type="submit">Отправить</button>
     </form>
     <button class="modal-close" type="button">Закрыть</button>
   </section>

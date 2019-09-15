@@ -37,13 +37,13 @@
 
     <ul class="checked-in-user">
       <li>
-        <a href="profile.html"><!--Иконка пользователя--></a>
+        <a href="profile.html" aria-label="Иконка пользователя"></a>
       </li>
       <li>
         <a href="profile.html">Равшан Джамшутович</a>
       </li>
       <li>
-        <a href="check-out.html"><!--Иконка выхода--></a>
+        <a href="check-out.html" aria-label="Иконка выхода"></a>
       </li>
     </ul>
 
@@ -74,13 +74,56 @@
   <h1>Перфораторы</h1>
 
   <ul class="breadcrumbs">
-    <li><a href="index.html"><!--Иконка главной страницы--></a></li>
+    <li><a href="index.html" aria-label="Главная страница"></a></li>
     <li><a href="catalog.html">Каталог</a></li>
     <li><a href="tool.html">Инструмент</a></li>
     <li><a class="breadcrumbs-current">Перфораторы</a></li>
   </ul>
 
-  <!--форма фильтра производителей и питания-->
+  <!--Фильтр диапазона цен-->
+
+  <form class="filter" method="get" action="#">
+    <fieldset class="filter-manufacturers">
+      <legend>Производители:</legend>
+      <ul>
+        <li>
+          <input type="checkbox" id="filter-bosch" name="bosch" checked>
+          <label for="filter-bosch">Bosch</label>
+        </li>
+        <li>
+          <input type="checkbox" id="filter-interskol" name="interskol">
+          <label for="filter-interskol">Интерскол</label>
+        </li>
+        <li>
+          <input type="checkbox" id="filter-makita" name="makita" checked>
+          <label for="filter-makita">Makita</label>
+        </li>
+        <li>
+          <input type="checkbox" id="filter-dewalt" name="dewalt">
+          <label for="filter-dewalt">Dewalt</label>
+        </li>
+        <li>
+          <input type="checkbox" id="filter-hitachi" name="hitachi">
+          <label for="filter-hitachi">Hitachi</label>
+        </li>
+      </ul>
+    </fieldset>
+
+    <fieldset class="filter-power">
+      <legend>Питание:</legend>
+      <ul>
+        <li>
+          <input type="radio" name="power" value="battery-power" id="filter-battery-power" checked>
+          <label for="filter-battery-power">Аккумуляторные</label>
+        </li>
+        <li>
+          <input type="radio" name="power" value="mains-power" id="filter-mains-power">
+          <label for="filter-mains-power">Сетевые</label>
+        </li>
+      </ul>
+    </fieldset>
+    <button type="submit">Показать</button>
+  </form>
 
   <section class="catalog">
     <h2 class="visually-hidden">Список перфораторов</h2>
