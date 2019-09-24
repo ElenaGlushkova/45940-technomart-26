@@ -3,37 +3,43 @@
   <head>
     <meta charset="utf-8">
     <title>Компания Техномарт</title>
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700|PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
   <header class="main-header">
-      <img class="index-logo" src="img/logo-technomart.svg" width="109" height="19" alt="Логотип Техномарта">
-
+    <div class="header-logo-interactive">
+      <div class="index-logo-container">
+        <img class="index-logo" src="img/logo-technomart.svg" width="109" height="19" alt="Логотип Техномарта">
+      </div>
       <ul class="header-interactive">
-        <li>
+        <li class="search">
           <input type="search" name="search" placeholder="Поиск:">
         </li>
-        <li>
-          <a class="bookmarks button" href="#">Закладки:<span>0</span></a>
+        <li class="bookmarks">
+          <a href="#">Закладки:<span>0</span></a>
         </li>
-        <li>
-          <a class="basket button" href="#">Корзина:<span>0</span></a>
+        <li class="basket">
+          <a href="#">Корзина:<span>0</span></a>
         </li>
-        <li>
-          <a class="order button" href="#">Оформить заказ</a>
+        <li class="order">
+          <a href="#">Оформить заказ</a>
         </li>
       </ul>
+    </div>
 
     <div class="header-contacts">
-      <p>
+      <p class="description">
         Интернет-магазин<br>
         строительных материалов<br>
         и инструментов для ремонта
       </p>
 
-      <p>
-        <span class="phone-number">+7 (812) 555-05-55</span>
-        г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
-      </p>
+      <div>
+        <p class="phone-number">+7 (812) 555-05-55</p>
+        <span class="header-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
+      </div>
 
       <ul class="header-login">
         <li>
@@ -72,13 +78,13 @@
         Техномарт работает со многими транспортными компаниями:
       </p>
 
-      <ul class="transport_companies">
+      <ul class="transport-companies">
         <li>Деловые линии</li>
         <li>Автотрейдинг</li>
         <li>ЖелДорЭкспедиция</li>
       </ul>
 
-      <a class="button" href="company.html">Подробнее о компании</a>
+      <a class="button button-company" href="company.html">Подробнее о компании</a>
     </section>
 
     <section class="contacts">
@@ -91,12 +97,15 @@
           <img src="img/map.png" width="300" height="158" alt="Компания Техномарт, адрес г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
         </button>
 
-        <button type="button">Заблудились? Напишите нам!</button>
+        <button class="button button-contacts" type="button">Заблудились? Напишите нам!</button>
     </section>
   </main>
 
   <footer class="main-footer">
-    <img class="index-logo" src="img/logo-technomart.svg" width="109" height="19" alt="Логотип Техномарта">
+    <div class="footer-blue">
+      <div class="index-logo-container">
+      <img class="index-logo" src="img/logo-technomart.svg" width="109" height="19" alt="Логотип Техномарта">
+      </div>
       <ul class="footer-navigation">
         <li><a href="company.html">Компания</a></li>
         <li><a href="news.html">Новости</a></li>
@@ -110,22 +119,23 @@
       +7 (812) 555-05-55
     </p>
 
-    <div class="section_navigation">
-      <ul>
+    <div>
+      <ul class="section-navigation">
         <li><a href="materials.html">Материалы</a></li>
         <li><a href="equipment.html">Техника</a></li>
         <li><a href="tool.html">Инструмент</a></li>
-        <li><a href="special_offers.html">Спецпредложения</a></li>
+        <li><a href="special-offers.html">Спецпредложения</a></li>
       </ul>
     </div>
-
-    <p>
+</div>
+    <div class="footer-dark">
+      <p>
       © 2010–2019 Компания «Техномарт»<br>
       Все права защищены
     </p>
 
-    <div class="footer-social">
-      <ul>
+    <div>
+      <ul class="footer-social">
         <li><a class="social-button" href="https://www.vk.com">Вконтакте</a></li>
         <li><a class="social-button" href="https://www.facebook.com">Фейсбук</a></li>
         <li><a class="social-button" href="https://www.instagram.com">Инстаграм</a></li>
@@ -140,6 +150,7 @@
       Разработано -<br>
       <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
     </p>
+    </div>
   </footer>
 
   <section class="modal modal-map">
@@ -151,20 +162,23 @@
   <section class="modal modal-feedback">
     <h2 class="visually-hidden">Заблудились? Напишите нам!</h2>
     <form name="feedback-form" method="post" action="#">
-      <div class="half-width">
-        <label for="name">Ваше имя:</label>
-        <input type="text" id="name" name="name" placeholder="Имя Фамилия">
+      <div class="form-content">
+        <div class="half-width">
+          <label for="name">Ваше имя:</label><br>
+          <input type="text" id="name" name="name" placeholder="Имя Фамилия">
+        </div>
+        <div class="half-width">
+          <label for="email">Ваш e-mail:</label><br>
+          <input type="email" id="email" name="email" placeholder="email@example.com">
+        </div>
+
+        <label for="letter">Текст письма:</label><br>
+        <textarea id="letter" name="letter" rows="5" placeholder="В свободной форме"></textarea>
       </div>
 
-      <div class="half-width">
-        <label for="email">Ваш e-mail:</label>
-        <input type="email" id="email" name="email" placeholder="email@example.com">
+      <div class="form-buttons">
+        <button class="button button-feedback" type="submit">Отправить</button>
       </div>
-
-      <label for="letter">Текст письма:</label>
-      <textarea id="letter" name="letter" rows="5" placeholder="В свободной форме"></textarea>
-
-      <button type="submit">Отправить</button>
     </form>
     <button class="modal-close" type="button">Закрыть</button>
   </section>
