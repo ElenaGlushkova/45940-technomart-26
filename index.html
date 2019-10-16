@@ -282,21 +282,29 @@
             <li class="slider-item slider-item-1 slide" id="slide1">
               <h3 class="slide-title">Доставка</h3>
               <p class="slide-description">
-                Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж!
+                Мы с удовольствием доставим ваш товар прямо<br>
+                к вашему подъезду совершенно бесплатно!
+              </p>
+              <p class="slide-description">
+                Ведь мы неплохо заработаем,<br>
+                поднимая его на ваш этаж!
               </p>
               <img src="img/delivery.png" width="468" height="261" alt="Доставка">
             </li>
             <li class="slider-item slider-item-2 slide" id="slide2">
               <h3 class="slide-title">Гарантия</h3>
               <p class="slide-description">
-                Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгоранием,  вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.
+                Если купленный у нас товар поломается или заискрит,<br>
+                а также в случае пожара, спровоцированного его возгоранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый.<br>
+                Дом уж восстановите как-нибудь сами.
               </p>
               <img src="img/guarantee.png" width="389" height="283" alt="Гарантия">
             </li>
             <li class="slider-item slider-item-3 slide" id="slide3">
               <h3 class="slide-title">Кредит</h3>
               <p class="slide-description">
-                Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.
+                Залезть в долговую яму стало проще!<br>
+                Кредитные консультанты придут вам на помощь.
               </p>
               <img src="img/credit.png" width="465" height="285" alt="Кредит">
               <a class="button button-slide" href="#">Отправить заявку</a>
@@ -327,9 +335,21 @@
             Вы можете забрать товар сами,<br>
             заехав в наш офис:<br>
           <div class="map">
-            <img src="img/map.png" width="300" height="158" alt="Компания Техномарт, адрес г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
+            <input class="visually-hidden" type="radio" id="map-radio" name="map">
+            <div class="big-map">
+              <input class="visually-hidden" type="radio" id="big-map-radio" name="map">
+              <label class="big-map-label" for="big-map-radio">
+                <button class="modal-close" type="button">
+                  <span class="visually-hidden">Закрыть</span>
+                </button>
+                <img class="big-map-image" src="img/map-big.png" width="940" height="446" alt="Компания Техномарт, адрес г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
+              </label>
+            </div>
+            <label class="map-label" for="map-radio">
+              <img class="map-image" src="img/map.png" width="300" height="158" alt="Компания Техномарт, адрес г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
+            </label>
           </div>
-          <button class="button button-contacts" type="button">Заблудились? Напишите нам!</button>
+          <a class="button button-contacts" href="feedback.html">Заблудились? Напишите нам!</a>
         </section>
       </div>
     </main>
@@ -381,12 +401,15 @@
     </footer>
     <section class="modal modal-map">
       <h2 class="visually-hidden">Как до нас добраться</h2>
-      <img src="img/map-big.png" width="940" height="446" alt="Компания Техномарт, адрес г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
-      <button class="modal-close" type="button">Закрыть</button>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002922!2d30.320858715855685!3d59.93871916905448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2s!4v1571227611617!5m2!1sru!2s" width="940" height="446" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+      <button class="modal-close" type="button">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
     </section>
+
     <section class="modal modal-feedback">
       <h2 class="visually-hidden">Заблудились? Напишите нам!</h2>
-      <form name="feedback-form" method="post" action="#">
+      <form name="feedback-form" method="post" action="https://echo.htmlacademy.ru">
         <ul class="form-content">
           <li class="form-item half-width">
             <label for="name">Ваше имя:</label>
@@ -405,7 +428,14 @@
           <button class="button button-feedback" type="submit">Отправить</button>
         </div>
       </form>
-      <button class="modal-close" type="button">Закрыть</button>
+      <button class="modal-close" type="button">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
     </section>
+
+<!--
+    <script src="js/map.js"></script>
+-->
+    <script src="js/feedback.js"></script>
   </body>
 </html>

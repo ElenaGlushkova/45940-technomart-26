@@ -129,23 +129,28 @@
                 <legend>Производители:</legend>
                 <ul>
                   <li>
-                    <input type="checkbox" id="filter-bosch" name="bosch" checked>
+                    <input class="visually-hidden" type="checkbox" id="filter-bosch" name="bosch" checked>
+                    <span class="indicator"></span>
                     <label for="filter-bosch">Bosch</label>
                   </li>
                   <li>
-                    <input type="checkbox" id="filter-interskol" name="interskol">
+                    <input class="visually-hidden" type="checkbox" id="filter-interskol" name="interskol">
+                    <span class="indicator"></span>
                     <label for="filter-interskol">Интерскол</label>
                   </li>
                   <li>
-                    <input type="checkbox" id="filter-makita" name="makita" checked>
+                    <input class="visually-hidden" type="checkbox" id="filter-makita" name="makita" checked>
+                    <span class="indicator"></span>
                     <label for="filter-makita">Makita</label>
                   </li>
                   <li>
-                    <input type="checkbox" id="filter-dewalt" name="dewalt">
+                    <input class="visually-hidden" type="checkbox" id="filter-dewalt" name="dewalt">
+                    <span class="indicator"></span>
                     <label for="filter-dewalt">Dewalt</label>
                   </li>
                   <li>
-                    <input type="checkbox" id="filter-hitachi" name="hitachi">
+                    <input class="visually-hidden" type="checkbox" id="filter-hitachi" name="hitachi">
+                    <span class="indicator"></span>
                     <label for="filter-hitachi">Hitachi</label>
                   </li>
                 </ul>
@@ -155,11 +160,13 @@
                 <legend>Питание:</legend>
                 <ul>
                   <li>
-                    <input type="radio" id="filter-battery-power" name="power" value="battery-power" checked>
+                    <input class="visually-hidden" type="radio" id="filter-battery-power" name="power" value="battery-power" checked>
+                    <span class="indicator"></span>
                     <label for="filter-battery-power">Аккумуляторные</label>
                   </li>
                   <li>
-                    <input type="radio" id="filter-mains-power" name="power" value="mains-power">
+                    <input class="visually-hidden" type="radio" id="filter-mains-power" name="power" value="mains-power">
+                    <span class="indicator"></span>
                     <label for="filter-mains-power">Сетевые</label>
                   </li>
                 </ul>
@@ -464,7 +471,9 @@
         <a class="button button-basket-order" href="#">Оформить заказ</a>
         <a class="button button-basket-buy" href="catalog.html">Продолжить покупки</a>
       </div>
-      <button class="modal-close" type="button">Закрыть</button>
+      <button class="modal-close" type="button">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
     </section>
   </body>
 </html>
