@@ -1,6 +1,7 @@
 var feedbackOpen = document.querySelector(".button-contacts");
 
 var feedbackPopup = document.querySelector(".modal-feedback");
+var feedbackCover = document.querySelector(".cover");
 var feedbackClose = feedbackPopup.querySelector(".modal-close");
 
 var feedbackForm = feedbackPopup.querySelector("form");
@@ -29,17 +30,22 @@ feedbackOpen.addEventListener("click", function(evt) {
   } else {
     feedbackName.focus();
   }
+  feedbackCover.classList.add("cover-show");
 });
 
 feedbackClose.addEventListener("click", function (evt) {
   evt.preventDefault();
   feedbackPopup.classList.remove("modal-show");
+  feedbackPopup.classList.remove("modal-error");
+  feedbackCover.classList.remove("cover-show");
 });
 
 feedbackForm.addEventListener("submit", function (evt) {
   if (!feedbackName.value || !feedbackEmail.value || !feedbackLetter.value) {
     evt.preventDefault();
-    console.log("Нужно ввести имя, email и текст письма");
+    feedbackPopup.classList.remove("modal-error");
+    feedbackPopup.offsetWidth = feedbackPopup.offsetWidth;
+    feedbackPopup.classList.add("modal-error");
   } else {
     if (isStorageSupport) {
       localStorage.setItem("name", feedbackName.value);
@@ -53,6 +59,15 @@ window.addEventListener("keydown", function (evt) {
     evt.preventDefault();
     if (feedbackPopup.classList.contains("modal-show")) {
       feedbackPopup.classList.remove("modal-show");
+      feedbackPopup.classList.remove("modal-error");
+      feedbackCover.classList.remove("cover-show");
     }
   }
+});
+
+feedbackCover.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  feedbackPopup.classList.remove("modal-show");
+  feedbackPopup.classList.remove("modal-error");
+  feedbackCover.classList.remove("cover-show");
 });
