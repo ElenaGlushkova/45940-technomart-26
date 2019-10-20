@@ -45,7 +45,7 @@
             и инструментов для ремонта
           </p>
           <div class="phone-address">
-            <p class="phone-number">+7 (812) 555-05-55</p>
+            <a class="phone-number" href="tel:+78125550555">+7 (812) 555-05-55</a>
             <span class="header-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
           </div>
           <ul class="header-login">
@@ -83,7 +83,7 @@
           <h2 class="visually-hidden">Промо-блок</h2>
           <ul class="sections">
             <li class="materials">
-              <div class="flag-new"></div>
+              <div class="flag-new"><span class="visually-hidden">Новинка</span></div>
               <h3>Материалы</h3>
               <a href="#">На любой вкус</a>
               <p class="button button-promo"></p>
@@ -115,8 +115,18 @@
               <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
               <input class="visually-hidden" type="radio" id="product-2" name="toggle">
               <div class="slider-arrows">
-                <label class="slider-arrows-item slider-arrow-left" for="product-1">Первый</label>
-                <label class="slider-arrows-item slider-arrow-right" for="product-2">Второй</label>
+                <label class="slider-arrows-item slider-arrow-left" for="product-1">
+                  <span class="visually-hidden">Первый</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="40" viewBox="0 0 22 40">
+                    <path fill="#FFF" d="M19.83-.035l2.089 2.099L4.13 19.947l17.847 17.939-2.09 2.099L-.048 19.947z"></path>
+                  </svg>
+                </label>
+                <label class="slider-arrows-item slider-arrow-right" for="product-2">
+                  <span class="visually-hidden">Второй</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="40" viewBox="0 0 22 40">
+                    <path fill="#FFF" d="M2.098-.035L.009 2.064l17.789 17.883L-.048 37.886l2.089 2.099 19.935-20.038z"></path>
+                  </svg>
+                </label>
               </div>
               <div class="slider-controls">
                 <label class="slider-controls-item slider-controls-item-1" for="product-1">Первый</label>
@@ -143,7 +153,7 @@
             <button class="button button-popular">Все популярные товары</button>
           </div>
           <ul class="catalog-list">
-            <li class="catalog-item" onclick="window.open('BOSCH-BFG-9000.html', '_blank');" style="cursor: pointer;">
+            <li class="catalog-item">
               <a class="catalog-item-link" href="BOSCH-BFG-9000.html">
                 <img src="img/bosch-bfg-9000.png" width="218" height="170" alt="Перфоратор BOSCH BFG 9000">
                 <p class="catalog-item-name">
@@ -196,7 +206,7 @@
             </li>
             <li class="catalog-item">
               <a class="catalog-item-link" href="BOSCH-BFG-2000.html">
-                <div class="flag-new"></div>
+                <div class="flag-new"><span class="visually-hidden">Новинка</span></div>
                 <img src="img/bosch-bfg-2000.png" width="218" height="170" alt="Перфоратор BOSCH BFG 2000">
                 <p class="catalog-item-name">
                   Перфоратор BOSCH<br>
@@ -364,7 +374,7 @@
           <div class="footer-container">
             <p class="address">
               г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
-              +7 (812) 555-05-55
+              <a href="tel:+78125550555">+7 (812) 555-05-55</a>
             </p>
             <ul class="section-navigation">
               <li><a href="materials.html">Материалы</a></li>
@@ -398,7 +408,7 @@
     </footer>
     <section class="modal modal-map">
       <h2 class="visually-hidden">Как до нас добраться</h2>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002922!2d30.320858715855685!3d59.93871916905448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2s!4v1571227611617!5m2!1sru!2s" width="940" height="446" style="border:0;" allowfullscreen=""></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2s!4v1571588405510!5m2!1sru!2s" width="940" height="446" style="border:0;" allowfullscreen=""></iframe>
       <button class="modal-close" type="button">
         <span class="visually-hidden">Закрыть</span>
       </button>

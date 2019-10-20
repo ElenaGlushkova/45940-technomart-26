@@ -379,7 +379,7 @@ input[type="search"]::-webkit-search-results-decoration {
   margin-left: 71px;
 }
 
-p.phone-number {
+.phone-number {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -789,8 +789,6 @@ h2 {
   width: 575px;
   height: 40px;
   margin-left: 25px;
-
-  font-size: 0;
 }
 
 .slider-arrow-left {
@@ -801,10 +799,6 @@ h2 {
   height: 40px;
 
   vertical-align: middle;
-
-  background-image: url("../img/icon-left.svg");
-  background-repeat: no-repeat;
-  background-position: center;
 
   cursor: pointer;
 }
@@ -817,10 +811,6 @@ h2 {
   height: 40px;
 
   vertical-align: middle;
-
-  background-image: url("../img/icon-right.svg");
-  background-repeat: no-repeat;
-  background-position: center;
 
   cursor: pointer;
 }
@@ -899,10 +889,12 @@ h2 {
   background-position: center center;
 }
 
-.slider #product-1:checked ~ .slider-list .slider-item:nth-child(1) {
-  display: block;
+.slider #product-1:focus ~ .slider-arrows .slider-arrow-left path,
+.slider #product-2:focus ~ .slider-arrows .slider-arrow-right path {
+  fill: #ee3643;
 }
 
+.slider #product-1:checked ~ .slider-list .slider-item:nth-child(1),
 .slider #product-2:checked ~ .slider-list .slider-item:nth-child(2) {
   display: block;
 }
@@ -988,12 +980,21 @@ h2 {
 }
 
 .breadcrumbs-index {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 14px;
   height: 12px;
+}
 
-  background-image: url("../img/icon-home.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+.breadcrumbs a:hover,
+.breadcrumbs a:focus {
+  color: #ee3643;
+}
+
+.breadcrumbs-index a:hover g,
+.breadcrumbs-index a:focus g {
+  fill: #ee3643;
 }
 
 .catalog-list {
@@ -1042,7 +1043,7 @@ h2 {
   background-position: center;
 }
 
-.catalog-item-link:hover,
+.catalog-item:hover,
 .catalog-item-link:focus {
   border: none;
   box-shadow: 0 10px 25px 0 rgba(41, 52, 73, 0.5);
@@ -1305,8 +1306,7 @@ h2 {
   background-color: #32425c;
 }
 
-.slider-services .slider-controls label:hover,
-.slider-services .slider-controls label:focus {
+.slider-services .slider-controls label:hover {
   background-color: #293449;
 }
 
@@ -1323,6 +1323,10 @@ h2 {
 
   box-shadow: 0 1px 0 0 #ffffff, inset 0 1px 0 0 #ffffff;
   background-color: #ffffff;
+}
+
+#service-1:focus ~ .slider-controls label[for="service-1"] {
+  box-shadow: -2px 0 15px 0 #293449;
 }
 
 .company-container {
@@ -1420,6 +1424,10 @@ h2 {
   border: none;
 
   cursor: pointer;
+}
+
+.map .map-radio:focus ~ .map-label .map-image {
+  border: 1px solid #ee3643;
 }
 
 .map .map-radio:checked ~ .big-map {
@@ -1703,7 +1711,6 @@ h2 {
   align-items: center;
   height: 38px;
 
-
   font-size: 13px;
   line-height: 18px;
   font-family: "PT Sans", "Tahoma", sans-serif;
@@ -1788,12 +1795,12 @@ h2 {
 }
 
 .sort label:hover,
-.sort label:focus {
+.sort-container input:focus + label {
   opacity: 1;
 }
 
 .sort-container label:hover + .underline,
-.sort-container label:focus + .underline {
+.sort-container input:focus ~ .underline {
   border-bottom-style: solid;
 }
 
@@ -1801,6 +1808,14 @@ h2 {
   color: #ee3643;
 
   opacity: 1;
+}
+
+.sort-arrows input:focus + label {
+  opacity: 1;
+}
+
+.sort-arrows input:focus + label path {
+  fill: #000000;
 }
 
 .sort-direction input[type="radio"]:checked ~ label {
@@ -1857,10 +1872,6 @@ h2 {
   border-radius: 3px;
 }
 
-.pagination input[type="radio"] {
-  display: none;
-}
-
 .pagination label {
   z-index: 1;
 
@@ -1870,11 +1881,6 @@ h2 {
   text-transform: uppercase;
 
   cursor: pointer;
-}
-
-.pagination label:hover + div,
-.pagination label:focus + div {
-  border-color: #bdc6ca;
 }
 
 .pagination label:active + div {
@@ -1888,6 +1894,11 @@ h2 {
 
 .pagination input:checked ~ label {
   color: #ffffff;
+}
+
+.pages label:hover + div,
+.pages input:focus ~ div {
+  border-color: #bdc6ca;
 }
 
 .article-background {
@@ -2007,21 +2018,26 @@ h2 {
 }
 
 p.address {
-  margin: 34px 67px 53px 0;
+  margin: 34px 32px 53px 0;
 
+  font-size: 18px;
+  line-height: 24px;
+  text-align: left;
   color: #f3f7f9;
+
+  cursor: pointer;
 }
 
-.main-footer p a {
+.main-footer p:not(.address) a {
   color: #ffd180;
 }
 
-.main-footer p a:hover,
-.main-footer p a:focus {
+.main-footer p:not(.address) a:hover,
+.main-footer p:not(.address) a:focus {
   text-decoration: underline;
 }
 
-.main-footer p a:active {
+.main-footer p:not(.address) a:active {
   color: #ee3643;
   text-decoration: none;
 }
