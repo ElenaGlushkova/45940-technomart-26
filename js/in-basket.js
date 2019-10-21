@@ -1,6 +1,4 @@
-var catalog = document.querySelector(".catalog-list");
 var basketOpenButtons = document.querySelectorAll(".button-catalog-buy");
-var basketOpen;
 
 var basketPopup = document.querySelector(".modal-in-basket");
 var basketCover = document.querySelector(".cover");
@@ -10,8 +8,8 @@ var basketOrder = basketPopup.querySelector(".button-order");
 
 var headerBasket = document.querySelector(".basket");
 
-for (basketOpen of basketOpenButtons) {
-  basketOpen.addEventListener("click", function(evt) {
+for (var i = 0; i < basketOpenButtons.length; i++) {
+  basketOpenButtons[i].addEventListener("click", function(evt) {
     evt.preventDefault();
     basketPopup.classList.add("modal-show");
     basketCover.classList.add("cover-show");
