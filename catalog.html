@@ -5,7 +5,7 @@
     <title>Каталог компании "Техномарт"</title>
     <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700%7CPT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style-min.css" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
@@ -16,25 +16,22 @@
           </div>
           <ul class="header-interactive">
             <li class="search">
-              <input type="search" name="search" placeholder="Поиск:">
+              <label class="visually-hidden" for="search">Поле поиска</label>
+              <input type="search" id="search" name="search" placeholder="Поиск:">
               <button class="loupe" type="submit">
                 <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
                   <path fill="#ffffff" d="M17 15.586l-3.542-3.542A7.465 7.465 0 0 0 15 7.5 7.5 7.5 0 1 0 7.5 15c1.71 0 3.282-.579 4.544-1.542L15.586 17 17 15.586zM2 7.5C2 4.467 4.467 2 7.5 2 10.532 2 13 4.467 13 7.5c0 3.032-2.468 5.5-5.5 5.5A5.506 5.506 0 0 1 2 7.5z"></path>
                 </svg>
               </button>
-              <div></div>
             </li>
             <li class="bookmarks">
-              <a href="#">Закладки:<span> 0</span></a>
-              <div></div>
+              <a href="#">Закладки:<pre> </pre>0</a>
             </li>
             <li class="basket">
-              <a href="#">Корзина:<span> 10</span></a>
-              <div></div>
+              <a href="#">Корзина:<pre> </pre>10</a>
             </li>
             <li class="order">
               <a href="order.html">Оформить заказ</a>
-              <div></div>
             </li>
           </ul>
         </div>
@@ -47,7 +44,7 @@
             и инструментов для ремонта
           </p>
           <div class="phone-address">
-            <a class="phone-number" href="tel:+78125550555">+7 (812) 555-05-55</a>
+            <a class="phone-number" href="tel:+78125550555" aria-label="Номер телефона">+7 (812) 555-05-55</a>
             <span class="header-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
           </div>
           <div class="user">
@@ -60,7 +57,7 @@
                 </a>
               </li>
               <li class="user-name">
-                <a href="profile.html">Равшан Джамшутович</a>
+                <a href="profile.html" aria-label="Имя пользователя">Равшан Джамшутович</a>
               </li>
               <li class="exit">
                 <a href="check-out.html" aria-label="Иконка выхода">
@@ -134,8 +131,8 @@
                     <div class="toggle toggle-max"></div>
                   </div>
                   <div class="price-controls">
-                    <label class="min-price"><input type="text" name="min-price" value="0"></label>
-                    <label class="max-price"><input type="text" name="max-price" value="30000"></label>
+                    <label class="min-price" aria-label="Минимальная цена"><input type="text" name="min-price" value="0"></label>
+                    <label class="max-price" aria-label="Максимальная цена"><input type="text" name="max-price" value="30000"></label>
                   </div>
                 </div>
               </fieldset>
@@ -195,24 +192,21 @@
               <ul class="sort-by">
                 <li class="sort-price sort-container">
                   <input class="sort-radio visually-hidden" type="radio" id="sort-price" name="sort" value="price">
-                  <label for="sort-price">По цене</label>
-                  <p class="underline"></p>
+                  <label class="sort-name" for="sort-price">По цене</label>
                 </li>
                 <li class="sort-type sort-container">
                   <input class="sort-radio visually-hidden" type="radio" id="sort-type" name="sort" value="type">
-                  <label for="sort-type">По типу</label>
-                  <p class="underline"></p>
+                  <label class="sort-name" for="sort-type">По типу</label>
                 </li>
                 <li class="sort-func sort-container">
                   <input class="sort-radio visually-hidden" type="radio" id="sort-func" name="sort" value="func">
-                  <label for="sort-func">По функционалу</label>
-                  <p class="underline"></p>
+                  <label class="sort-name" for="sort-func">По функционалу</label>
                 </li>
               </ul>
               <ul class="sort-direction">
                 <li class="sort-arrows">
                   <input class="sort-radio visually-hidden" type="radio" id="sort-arrow-up" name="sort-arrows" value="arrow-up">
-                  <label for="sort-arrow-up">
+                  <label class="sort-arrow" for="sort-arrow-up">
                     <span class="visually-hidden">Сортировка по возрастанию</span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
                       <path fill="#231F20" d="M5.5 0L0 10h11z"></path>
@@ -221,7 +215,7 @@
                 </li>
                 <li class="sort-arrows">
                   <input class="sort-radio visually-hidden" type="radio" id="sort-arrow-down" name="sort-arrows" value="arrow-down">
-                  <label for="sort-arrow-down">
+                  <label class="sort-arrow" for="sort-arrow-down">
                     <span class="visually-hidden">Сортировка по убыванию</span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
                       <path fill="#231F20" d="M5.5 10L0 0h11"></path>
@@ -234,7 +228,7 @@
               <h2 class="visually-hidden">Каталог</h2>
               <ul class="catalog-list">
                 <li class="catalog-item">
-                  <a class="catalog-item-link" href="BOSCH-BFG-3000.html">
+                  <a class="catalog-item-link" href="BOSCH-BFG-3000.html" aria-label="Перфоратор BOSCH BFG 3000">
                     <img src="img/bosch-bfg-3000.png" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
                     <p class="catalog-item-name">
                       Перфоратор BOSCH<br>
@@ -251,7 +245,7 @@
                   </p>
                 </li>
                 <li class="catalog-item">
-                  <a class="catalog-item-link" href="BOSCH-BFG-6000.html">
+                  <a class="catalog-item-link" href="BOSCH-BFG-6000.html" aria-label="Перфоратор BOSCH BFG 6000">
                     <img src="img/bosch-bfg-6000.png" width="218" height="170" alt="Перфоратор BOSCH BFG 6000">
                     <p class="catalog-item-name">
                       Перфоратор BOSCH<br>
@@ -268,7 +262,7 @@
                   </p>
                 </li>
                 <li class="catalog-item">
-                  <a class="catalog-item-link" href="BOSCH-BFG-2000.html">
+                  <a class="catalog-item-link" href="BOSCH-BFG-2000.html" aria-label="Перфоратор BOSCH BFG 2000">
                     <div class="flag-new"><span class="visually-hidden">Новинка</span></div>
                     <img src="img/bosch-bfg-2000.png" width="218" height="170" alt="Перфоратор BOSCH BFG 2000">
                     <p class="catalog-item-name">
@@ -286,7 +280,7 @@
                   </p>
                 </li>
                 <li class="catalog-item">
-                  <a class="catalog-item-link" href="BOSCH-BFG-3000.html">
+                  <a class="catalog-item-link" href="BOSCH-BFG-3000.html" aria-label="Перфоратор BOSCH BFG 3000">
                     <img src="img/bosch-bfg-3000.png" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
                     <p class="catalog-item-name">
                       Перфоратор BOSCH<br>
@@ -303,7 +297,7 @@
                   </p>
                 </li>
                 <li class="catalog-item">
-                  <a class="catalog-item-link" href="BOSCH-BFG-6000.html">
+                  <a class="catalog-item-link" href="BOSCH-BFG-6000.html" aria-label="Перфоратор BOSCH BFG 6000">
                     <div class="flag-new"><span class="visually-hidden">Новинка</span></div>
                     <img src="img/bosch-bfg-6000.png" width="218" height="170" alt="Перфоратор BOSCH BFG 6000">
                     <p class="catalog-item-name">
@@ -321,7 +315,7 @@
                   </p>
                 </li>
                 <li class="catalog-item">
-                  <a class="catalog-item-link" href="BOSCH-BFG-2000.html">
+                  <a class="catalog-item-link" href="BOSCH-BFG-2000.html" aria-label="Перфоратор BOSCH BFG 2000">
                     <img src="img/bosch-bfg-2000.png" width="218" height="170" alt="Перфоратор BOSCH BFG 2000">
                     <p class="catalog-item-name">
                       Перфоратор BOSCH<br>
@@ -338,7 +332,7 @@
                   </p>
                 </li>
                 <li class="catalog-item">
-                  <a class="catalog-item-link" href="BOSCH-BFG-3000.html">
+                  <a class="catalog-item-link" href="BOSCH-BFG-3000.html" aria-label="Перфоратор BOSCH BFG 3000">
                     <div class="flag-new"><span class="visually-hidden">Новинка</span></div>
                     <img src="img/bosch-bfg-3000.png" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
                     <p class="catalog-item-name">
@@ -356,7 +350,7 @@
                   </p>
                 </li>
                 <li class="catalog-item">
-                  <a class="catalog-item-link" href="BOSCH-BFG-6000.html">
+                  <a class="catalog-item-link" href="BOSCH-BFG-6000.html" aria-label="Перфоратор BOSCH BFG 6000">
                     <img src="img/bosch-bfg-6000.png" width="218" height="170" alt="Перфоратор BOSCH BFG 6000">
                     <p class="catalog-item-name">
                       Перфоратор BOSCH<br>
@@ -373,7 +367,7 @@
                   </p>
                 </li>
                 <li class="catalog-item">
-                  <a class="catalog-item-link" href="BOSCH-BFG-2000.html">
+                  <a class="catalog-item-link" href="BOSCH-BFG-2000.html" aria-label="Перфоратор BOSCH BFG 2000">
                     <img src="img/bosch-bfg-2000.png" width="218" height="170" alt="Перфоратор BOSCH BFG 2000">
                     <p class="catalog-item-name">
                       Перфоратор BOSCH<br>
@@ -491,7 +485,6 @@
     </div>
     <div class="cover"></div>
 
-    <script src="js/bookmarks.js"></script>
-    <script src="js/in-basket.js"></script>
+    <script src="js/catalog-min.js"></script>
   </body>
 </html>

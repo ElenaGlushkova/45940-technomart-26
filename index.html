@@ -5,7 +5,7 @@
     <title>Компания Техномарт</title>
     <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700%7CPT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style-min.css" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
@@ -16,8 +16,9 @@
           </div>
           <ul class="header-interactive">
             <li class="search">
-              <input type="search" name="search" placeholder="Поиск:">
-              <button class="loupe" type="submit">
+              <label class="visually-hidden" for="search">Поле поиска</label>
+              <input type="search" id="search" name="search" placeholder="Поиск:">
+              <button class="loupe" type="submit" aria-label="Кнопка поиска">
                 <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
                   <path fill="#ffffff" d="M17 15.586l-3.542-3.542A7.465 7.465 0 0 0 15 7.5 7.5 7.5 0 1 0 7.5 15c1.71 0 3.282-.579 4.544-1.542L15.586 17 17 15.586zM2 7.5C2 4.467 4.467 2 7.5 2 10.532 2 13 4.467 13 7.5c0 3.032-2.468 5.5-5.5 5.5A5.506 5.506 0 0 1 2 7.5z"></path>
                 </svg>
@@ -43,7 +44,7 @@
             и инструментов для ремонта
           </p>
           <div class="phone-address">
-            <a class="phone-number" href="tel:+78125550555">+7 (812) 555-05-55</a>
+            <a class="phone-number" href="tel:+78125550555" aria-label="Номер телефона">+7 (812) 555-05-55</a>
             <span class="header-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
           </div>
           <ul class="header-login">
@@ -104,21 +105,21 @@
               <input class="visually-hidden product-2" type="radio" id="product-2" name="toggle">
               <div class="slider-arrows">
                 <label class="slider-arrows-item slider-arrow-left" for="product-1">
-                  <span class="visually-hidden">Первый</span>
+                  <span class="visually-hidden">Первый слайд</span>
                   <svg xmlns="http://www.w3.org/2000/svg" width="22" height="40" viewBox="0 0 22 40">
                     <path fill="#FFF" d="M19.83-.035l2.089 2.099L4.13 19.947l17.847 17.939-2.09 2.099L-.048 19.947z"></path>
                   </svg>
                 </label>
                 <label class="slider-arrows-item slider-arrow-right" for="product-2">
-                  <span class="visually-hidden">Второй</span>
+                  <span class="visually-hidden">Второй слайд</span>
                   <svg xmlns="http://www.w3.org/2000/svg" width="22" height="40" viewBox="0 0 22 40">
                     <path fill="#FFF" d="M2.098-.035L.009 2.064l17.789 17.883L-.048 37.886l2.089 2.099 19.935-20.038z"></path>
                   </svg>
                 </label>
               </div>
               <div class="slider-controls">
-                <label class="slider-controls-item slider-controls-item-1" for="product-1">Первый</label>
-                <label class="slider-controls-item slider-controls-item-2" for="product-2">Второй</label>
+                <label class="slider-controls-item slider-controls-item-1" for="product-1">Первый слайд</label>
+                <label class="slider-controls-item slider-controls-item-2" for="product-2">Второй слайд</label>
               </div>
               <ul class="slider-list">
                 <li class="slider-item">
@@ -156,7 +157,7 @@
           </div>
           <ul class="catalog-list">
             <li class="catalog-item">
-              <a class="catalog-item-link" href="BOSCH-BFG-9000.html">
+              <a class="catalog-item-link" href="BOSCH-BFG-9000.html" aria-label="Перфоратор BOSCH BFG 9000">
                 <img src="img/bosch-bfg-9000.png" width="218" height="170" alt="Перфоратор BOSCH BFG 9000">
                 <p class="catalog-item-name">
                   Перфоратор BOSCH<br>
@@ -173,7 +174,7 @@
               </p>
             </li>
             <li class="catalog-item">
-              <a class="catalog-item-link" href="BOSCH-BFG-3000.html">
+              <a class="catalog-item-link" href="BOSCH-BFG-3000.html" aria-label="Перфоратор BOSCH BFG 3000">
                 <img src="img/bosch-bfg-3000.png" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
                 <p class="catalog-item-name">
                   Перфоратор BOSCH<br>
@@ -190,7 +191,7 @@
               </p>
             </li>
             <li class="catalog-item">
-              <a class="catalog-item-link" href="BOSCH-BFG-6000.html">
+              <a class="catalog-item-link" href="BOSCH-BFG-6000.html" aria-label="Перфоратор BOSCH BFG 6000">
                 <img src="img/bosch-bfg-6000.png" width="218" height="170" alt="Перфоратор BOSCH BFG 6000">
                 <p class="catalog-item-name">
                   Перфоратор BOSCH<br>
@@ -207,7 +208,7 @@
               </p>
             </li>
             <li class="catalog-item">
-              <a class="catalog-item-link" href="BOSCH-BFG-2000.html">
+              <a class="catalog-item-link" href="BOSCH-BFG-2000.html" aria-label="Перфоратор BOSCH BFG 2000">
                 <div class="flag-new"><span class="visually-hidden">Новинка</span></div>
                 <img src="img/bosch-bfg-2000.png" width="218" height="170" alt="Перфоратор BOSCH BFG 2000">
                 <p class="catalog-item-name">
@@ -235,42 +236,42 @@
           </div>
           <ul class="manufacturers">
             <li>
-              <a href="bosch.html">
+              <a href="bosch.html" aria-label="Компания Bosch">
                 <img src="img/bosch.png" width="126" height="37" alt="Компания Bosch">
               </a>
             </li>
             <li>
-              <a href="makita.html">
+              <a href="makita.html" aria-label="Компания Makita">
                 <img src="img/makita.png" width="123" height="40" alt="Компания Makita">
               </a>
             </li>
             <li>
-              <a href="dewalt.html">
+              <a href="dewalt.html" aria-label="Компания Dewalt">
                 <img src="img/dewalt.png" width="146" height="44" alt="Компания Dewalt">
               </a>
             </li>
             <li>
-              <a href="interskol.html">
+              <a href="interskol.html" aria-label="Компания Интерскол">
                 <img src="img/interskol.png" width="200" height="88" alt="Компания Интерскол">
               </a>
             </li>
             <li>
-              <a href="hitachi.html">
+              <a href="hitachi.html" aria-label="Компания Hitachi">
                 <img src="img/hitachi.png" width="169" height="31" alt="Компания Hitachi">
               </a>
             </li>
             <li>
-              <a href="lg.html">
+              <a href="lg.html" aria-label="Компания LG">
                 <img src="img/lg.png" width="121" height="73" alt="Компания LG">
               </a>
             </li>
             <li>
-              <a href="aeg.html">
+              <a href="aeg.html" aria-label="Компания AEG">
                 <img src="img/aeg.png" width="151" height="96" alt="Компания AEG">
               </a>
             </li>
             <li>
-              <a href="metabo.html">
+              <a href="metabo.html" aria-label="Компания Metabo">
                 <img src="img/metabo.png" width="204" height="69" alt="Компания Metabo">
               </a>
             </li>
@@ -355,7 +356,7 @@
                 </label>
                 <img class="big-map-image" src="img/map-big.png" width="940" height="446" alt="Компания Техномарт, адрес г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
               </div>
-            <label class="map-label" for="map-radio">
+            <label class="map-label" for="map-radio" aria-label="Карта">
               <img class="map-image" src="img/map.png" width="300" height="158" alt="Компания Техномарт, адрес г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
             </label>
           </div>
@@ -460,9 +461,6 @@
     </div>
     <div class="cover"></div>
 
-    <script src="js/bookmarks.js"></script>
-    <script src="js/map.js"></script>
-    <script src="js/feedback.js"></script>
-    <script src="js/in-basket.js"></script>
+    <script src="js/index-min.js"></script>
   </body>
 </html>
