@@ -9,9 +9,11 @@
   </head>
   <body>
     <header class="main-header">
-      <div class="logo-interactive-background">
-        <div class="logo-interactive">
-          <a class="logo-container header-logo" href="index.html" aria-label="Логотип компании Техномарт"></a>
+      <div class="logo-interactive">
+        <div class="limiter">
+          <div class="logo-container">
+            <a class="logo header-logo" href="#" aria-label="Логотип компании Техномарт"></a>
+          </div>
           <ul class="header-interactive">
             <li class="search">
               <input type="search" name="search" placeholder="Поиск:">
@@ -37,8 +39,8 @@
           </ul>
         </div>
       </div>
-      <div class="header-contacts-background">
-        <div class="header-contacts">
+      <div class="header-contacts">
+        <div class="limiter">
           <p class="description">
             Интернет-магазин<br>
             строительных материалов<br>
@@ -79,40 +81,45 @@
           </div>
           <nav class="main-navigation">
             <ul class="site-navigation">
-              <li><a href="index.html">Главная</a></li>
-              <li><a href="company.html">Компания</a></li>
-              <li><a href="catalog.html">Каталог</a></li>
-              <li><a href="news.html">Новости</a></li>
-              <li><a href="special-offers.html">Спецпредложения</a></li>
-              <li><a href="delivery.html">Доставка</a></li>
-              <li><a href="contacts.html">Контакты</a></li>
+              <li class="navigation-item"><a class="navigation-link" href="index.html">Главная</a></li>
+              <li class="navigation-item"><a class="navigation-link" href="company.html">Компания</a></li>
+              <li class="navigation-item"><a class="navigation-link" href="catalog.html">Каталог</a></li>
+              <li class="navigation-item"><a class="navigation-link" href="news.html">Новости</a></li>
+              <li class="navigation-item"><a class="navigation-link" href="special-offers.html">Спецпредложения</a></li>
+              <li class="navigation-item"><a class="navigation-link" href="delivery.html">Доставка</a></li>
+              <li class="navigation-item"><a class="navigation-link" href="contacts.html">Контакты</a></li>
             </ul>
           </nav>
         </div>
       </div>
     </header>
     <main class="container-catalog">
-      <div class="limiter">
-        <h1 class="visually-hidden">Каталог</h1>
-        <ul class="breadcrumbs">
-          <li class="breadcrumbs-index">
-            <a href="index.html" aria-label="Главная страница">
-              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="12" viewBox="0 0 15 12">
-                <g fill="#C1C6CE">
-                  <path d="M3 8v4h4V8h2v4h4V8L8 3.516z"></path>
-                  <path d="M14.831 6.365L13 4.751V0h-2v2.987L8.332.635c-.02-.017-.043-.023-.064-.037a.465.465 0 0 0-.08-.047.551.551 0 0 0-.095-.024C8.062.521 8.032.515 8 .515c-.031 0-.061.006-.092.012a.46.46 0 0 0-.095.025c-.028.011-.053.029-.08.046-.021.014-.045.02-.064.037l-6.498 5.73a.501.501 0 0 0 .33.875.497.497 0 0 0 .331-.125L8 1.677l6.169 5.438a.501.501 0 0 0 .662-.75z"></path>
-                </g>
-              </svg>
-            </a>
-          </li>
-          <li><a href="catalog.html">Каталог</a></li>
-          <li><a href="tool.html">Инструмент</a></li>
-          <li><a class="breadcrumbs-current">Перфораторы</a></li>
-        </ul>
-        <div class="section-title">
+      <h1 class="visually-hidden">Каталог</h1>
+      <section class="breadcrumbs-section">
+        <h2 class="visually-hidden">Путь к странице</h2>
+        <div class="limiter">
+          <ul class="breadcrumbs">
+            <li class="breadcrumbs-index">
+              <a href="index.html" aria-label="Главная страница">
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="12" viewBox="0 0 15 12">
+                  <g fill="#C1C6CE">
+                    <path d="M3 8v4h4V8h2v4h4V8L8 3.516z"></path>
+                    <path d="M14.831 6.365L13 4.751V0h-2v2.987L8.332.635c-.02-.017-.043-.023-.064-.037a.465.465 0 0 0-.08-.047.551.551 0 0 0-.095-.024C8.062.521 8.032.515 8 .515c-.031 0-.061.006-.092.012a.46.46 0 0 0-.095.025c-.028.011-.053.029-.08.046-.021.014-.045.02-.064.037l-6.498 5.73a.501.501 0 0 0 .33.875.497.497 0 0 0 .331-.125L8 1.677l6.169 5.438a.501.501 0 0 0 .662-.75z"></path>
+                  </g>
+                </svg>
+              </a>
+            </li>
+            <li><a href="catalog.html">Каталог</a></li>
+            <li><a href="tool.html">Инструмент</a></li>
+            <li><a class="breadcrumbs-current">Перфораторы</a></li>
+          </ul>
+        </div>
+      </section>
+      <section class="main-content">
+        <div class="section-title limiter">
           <h2>Перфораторы</h2>
         </div>
-        <div class="main-catalog-container">
+        <div class="limiter">
           <div class="filter-container">
             <h2 class="title filter-title">Фильтр:</h2>
             <form class="filter" method="get" action="https://echo.htmlacademy.ru">
@@ -389,12 +396,10 @@
                 <li class="pages page-1">
                   <input class="visually-hidden" type="radio" id="page-1" name="page" value="1">
                   <label for="page-1">1</label>
-                  <div></div>
                 </li>
                 <li class="pages page-2">
                   <input class="visually-hidden" type="radio" id="page-2" name="page" value="2">
                   <label for="page-2">2</label>
-                  <div></div>
                 </li>
                 <li class="pages page-3">
                   <input class="visually-hidden" type="radio" id="page-3" name="page" value="3">
@@ -404,36 +409,37 @@
                 <li class="pages page-next">
                   <input class="visually-hidden" type="radio" id="page-next" name="page" value="next">
                   <label for="page-next">Следующая</label>
-                  <div></div>
                 </li>
               </ul>
             </fieldset>
           </div>
         </div>
-      </div>
-      <div class="article-background">
-        <div class="article-container">
-          <article class="about-perforators">
-            <h2 class="article-title">Пара слов о перфораторах</h2>
-            <p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br>
-              Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
-            </p>
-          </article>
+      </section>
+      <article class="about-perforators">
+        <div class="limiter">
+          <h2 class="article-title">Пара слов о перфораторах</h2>
+          <p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br>
+            Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
+          </p>
         </div>
-      </div>
+      </article>
     </main>
     <footer class="main-footer">
-      <div class="footer-sup-background">
-        <div class="footer-sup">
-          <a class="logo-container footer-logo" href="index.html" aria-label="Логотип компании Техномарт"></a>
-          <ul class="footer-navigation">
-            <li><a href="company.html">Компания</a></li>
-            <li><a href="news.html">Новости</a></li>
-            <li><a href="catalog.html">Каталог</a></li>
-            <li><a href="delivery.html">Доставка</a></li>
-            <li><a href="contacts.html">Контакты</a></li>
-          </ul>
-          <div class="footer-container">
+      <div class="footer-sup">
+        <div class="limiter">
+          <div class="footer-container-1">
+            <div class="logo-container">
+              <a class="logo footer-logo" href="#" aria-label="Логотип компании Техномарт"></a>
+            </div>
+            <ul class="footer-navigation">
+              <li><a href="company.html">Компания</a></li>
+              <li><a href="news.html">Новости</a></li>
+              <li><a href="catalog.html">Каталог</a></li>
+              <li><a href="delivery.html">Доставка</a></li>
+              <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+          </div>
+          <div class="footer-container-2">
             <p class="address">
               г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
               <a class="footer-phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
@@ -447,8 +453,8 @@
           </div>
         </div>
       </div>
-      <div class="footer-sub-background">
-        <div class="footer-sub">
+      <div class="footer-sub">
+        <div class="limiter">
           <p class="rights">
             © 2010–2019 Компания «Техномарт»<br>
             Все права защищены
@@ -470,7 +476,7 @@
         </div>
       </div>
     </footer>
-    <section class="modal modal-in-basket">
+    <div class="modal modal-in-basket">
       <h2 class="visually-hidden">Добавление товара в корзину</h2>
       <div class="form-content">
         <p>Товар добавлен в корзину!</p>
@@ -482,7 +488,7 @@
       <button class="modal-close" type="button">
         <span class="visually-hidden">Закрыть</span>
       </button>
-    </section>
+    </div>
     <div class="cover"></div>
 
     <script src="js/bookmarks.js"></script>
