@@ -1184,14 +1184,14 @@ h2 {
   -ms-flex-direction: column;
   flex-direction: column;
   width: auto;
-  height: 318px;
+  min-height: 318px;
   margin-bottom: 20px;
 }
 
 .catalog-item-link {
   display: block;
   width: inherit;
-  height: 318px;
+  min-height: inherit;
 
   border: 1px solid #e5e5e5;
 }
@@ -1243,7 +1243,7 @@ h2 {
 }
 
 .catalog-item-name {
-  width: 160px;
+  max-width: 200px;
   margin: 0 auto;
   margin-bottom: 13px;
 
@@ -1314,7 +1314,7 @@ h2 {
   -ms-flex-align: center;
   align-items: center;
   width: 940px;
-  height: 89px;
+  min-height: 89px;
 
   background-color: #f9f5f0;
 }
@@ -1328,6 +1328,7 @@ h2 {
 }
 
 .section-title h2 {
+  max-width: 625px;
   margin-left: 27px;
 }
 
@@ -1484,8 +1485,9 @@ h2 {
   -ms-flex-align: center;
   align-items: center;
   width: 240px;
-  height: 279px;
+  min-height: 279px;
   margin-top: 21px;
+  margin-bottom: 50px;
 
   background-size: 10px 279px;
   background-image: url("../img/shadow.png");
@@ -1501,7 +1503,7 @@ h2 {
   -ms-flex-align: center;
   align-items: center;
   width: 240px;
-  height: 61px;
+  min-height: 61px;
   padding-left: 22px;
 
   font-size: 21px;
@@ -2244,6 +2246,8 @@ h2 {
 }
 
 .footer-navigation li {
+  max-width: 130px;
+  margin-bottom: 10px;
   margin-left: 60px;
 }
 
@@ -2261,10 +2265,14 @@ h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  flex-wrap: wrap;
+  max-width: 615px;
+  padding-top: 30px;
 }
 
 .section-navigation li {
-  margin-top: 30px;
+  /*margin-top: 30px;*/
+  margin-bottom: 10px;
   margin-left: 60px;
 }
 
@@ -2337,8 +2345,9 @@ p.address:active {
 }
 
 .footer-sub {
-  margin: 0 auto;
 
+  margin: 0 auto;
+  min-height: 107px;
   background-color: #293449;
 }
 
@@ -2349,7 +2358,7 @@ p.address:active {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  height: 107px;
+  min-height: inherit;
 }
 
 p.rights {
@@ -2361,12 +2370,14 @@ p.rights {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  flex-wrap: wrap;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  max-width: 140px;
   margin-left: 161px;
 }
 
@@ -2374,6 +2385,7 @@ p.rights {
   width: 42px;
   height: 42px;
   margin-right: 3px;
+  margin-bottom: 3px;
 }
 
 .footer-social a {
