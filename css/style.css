@@ -545,6 +545,7 @@ input[type="search"]::-webkit-search-results-decoration {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  max-width: 281px;
   min-height: 45px;
   margin-bottom: 10px;
 
@@ -563,19 +564,21 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .header-login .login-button {
-  width: 121px;
+  justify-content: flex-start;
+  min-width: 121px;
   margin-right: 10px;
+  padding: 0 10px;
 }
 
 .header-login .check-in-button {
-  width: 150px;
+  min-width: 150px;
 }
 
 .login-button svg {
   min-width: 20px;
   height: 17px;
   margin-right: 14px;
-  margin-left: -10px;
+  margin-left: 4px;
   fill: #c5c5c5;
 }
 
@@ -1160,6 +1163,7 @@ h2 {
 }
 
 .slider .slider-item h3 {
+  max-width: 575px;
   margin: 0;
 
   font-size: 36px;
@@ -1172,6 +1176,7 @@ h2 {
 }
 
 .slider .slider-item p {
+  max-width: 575px;
   margin: 0;
 
   font-size: 18px;
@@ -1562,7 +1567,7 @@ h2 {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 358px;
+  min-height: 358px;
   margin-left: 80px;
 }
 
@@ -1624,8 +1629,8 @@ h2 {
   -ms-flex-align: center;
   align-items: center;
   width: 240px;
-  height: 279px;
-  margin-top: 23px;
+  min-height: 279px;
+  margin-top: 18px;
   margin-bottom: 50px;
 }
 
@@ -1742,6 +1747,10 @@ h2 {
   font-family: "Cuprum", "Arial Narrow", sans-serif;
 
   list-style: none;
+}
+
+.contacts {
+  width: 300px;
 }
 
 .contacts p {
@@ -2500,6 +2509,7 @@ h2 {
 }
 
 .section-navigation li {
+  max-width: 140px;
   margin-bottom: 10px;
   margin-left: 60px;
 }
